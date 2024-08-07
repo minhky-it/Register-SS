@@ -43,8 +43,8 @@ const register = async (EMAIL, NAME, PHONE) => {
 	});
 }
 
-app.listen(3000, async () => {
-  console.log('Express server listening on port 3000');
+app.listen(5500, async () => {
+  console.log('Express server listening on port 5500');
   	setInterval(async () => {
 		await register('minhky.book@gmail.com', 'Minh Kỳ', '0899910699');
 		await register('ngocha273155@gmail.com', 'Ngọc Hà', '0383345830');
