@@ -45,9 +45,13 @@ const register = async (EMAIL, NAME, PHONE) => {
 
 app.listen(3000, async () => {
   console.log('Express server listening on port 3000');
-  setInterval(async () => {
-	await register('minhky.book@gmail.com', 'Minh Kỳ', '0899910699');
-	await register('ngocha273155@gmail.com', 'Ngọc Hà', '0383345830');
-	await register('thinhkhainguyen@gmail.com', 'Nguyễn Phúc Thịnh', '0971221156');
-}, 5000);
+  	setInterval(async () => {
+		await register('minhky.book@gmail.com', 'Minh Kỳ', '0899910699');
+		await register('ngocha273155@gmail.com', 'Ngọc Hà', '0383345830');
+		await register('thinhkhainguyen@gmail.com', 'Nguyễn Phúc Thịnh', '0971221156');
+	}, 5000);
+	setInterval(async () => {
+		console.log('Ping to cronjs server');
+		axios.get('https://cronjs.onrender.com');
+	}, 300000);
 });
